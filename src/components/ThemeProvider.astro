@@ -1,10 +1,10 @@
 {/* Inlined to avoid FOUC. */}
 <script is:inline>
 	function getUserPref() {
-		const storedTheme = typeof localStorage !== "undefined" && localStorage.getItem("theme");
-		return (
-			storedTheme || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
-		);
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
 	}
 
 	function setTheme(newTheme) {
@@ -40,8 +40,7 @@
 	// View Transitions hook to restore theme
 	document.addEventListener("astro:after-swap", () => setTheme(getUserPref()));
 
-	// listen for theme-change custom event, fired in src/components/ThemeToggle.astro
-	document.addEventListener("theme-change", (e) => {
-		setTheme(e.detail.theme);
-	});
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{
+    setTheme(getUserPref());
+  });
 </script>

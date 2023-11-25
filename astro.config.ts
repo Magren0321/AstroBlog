@@ -10,7 +10,7 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
+	site: "https:/magren.cc",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
 		remarkRehype: { footnoteLabelProperties: { className: [""] } },
@@ -28,7 +28,7 @@ export default defineConfig({
 		prefetch(),
 	],
 	image: {
-		domains: ["webmention.io"],
+		domains: ["magren.cc"],
 	},
 	vite: {
 		plugins: [rawFonts([".ttf"])],

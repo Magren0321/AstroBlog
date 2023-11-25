@@ -31,7 +31,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 		</div>
 	)
 }
-<h1 class="title mb-3 sm:mb-1">{data.title}</h1>
+<h1 class="title mb-5 ">{data.title}</h1>
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
 	<p class="font-semibold">
 		<FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{" "}
@@ -66,17 +66,16 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 				<path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
 				<path d="M6 9h-.01" />
 			</svg>
-			{data.tags.map((tag, i) => (
+			{data.tags.map((tag) => (
 				<>
 					<a
-						class="cactus-link inline-block before:content-['#']"
+						class="inline-block ml-2 bg-gray-200 px-1 py-[1px] rounded text-sm dark:text-gray-700 before:content-['#']"
 						aria-label={`View more blogs with the tag ${tag}`}
 						href={`/tags/${tag}/`}
 						data-pagefind-filter="tag"
 					>
 						{tag}
 					</a>
-					{i < data.tags.length - 1 && ", "}
 				</>
 			))}
 		</div>
