@@ -46,7 +46,7 @@ export default {
 						"--tw-prose-links": theme("colors.textColor / 1"),
 						"--tw-prose-bold": theme("colors.textColor / 1"),
 						"--tw-prose-bullets": theme("colors.textColor / 1"),
-						"--tw-prose-quotes": theme("colors.quote / 1"),
+						"--tw-prose-quotes": theme("colors.accent / 1"),
 						"--tw-prose-code": theme("colors.textColor / 1"),
 						"--tw-prose-hr": "0.5px dashed #666",
 						"--tw-prose-th-borders": "#666",
@@ -54,6 +54,10 @@ export default {
 				},
 				DEFAULT: {
 					css: {
+						img: {
+							marginLeft: "auto",
+							marginRight: "auto",
+						},
 						a: {
 							"@apply no-underline": "",
 						},

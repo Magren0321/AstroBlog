@@ -48,6 +48,9 @@ const { headings } = await post.render();
 				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
 			>
 				<slot />
+        <div class='mt-10 font-mono opacity-50 hover:opacity-75'>
+          <a href={'/posts'}>{'>'}<span class='border-solid border-b-2 border-b-[#000] ml-2 dark:border-b-[#fff]'>cd . . </span></a>
+        </div>
 				<WebMentions />
 			</div>
 		</article>
