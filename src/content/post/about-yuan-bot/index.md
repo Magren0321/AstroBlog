@@ -8,7 +8,7 @@ tags: ["NodeJs", "前端"]
 [oicq](https://github.com/takayama-lily/oicq)是基于Node.js实现QQ(安卓)协议，提供了QQ内常用的功能操作
 [yuan-bot](https://github.com/Magren0321/yuan-bot)是基于[oicq](https://github.com/takayama-lily/oicq)并使用TS编写以及使用MongoDB作为数据库的QQ机器人。目前项目刚创建，只针对了Q群的精华消息，后续内容会慢慢丰富。
 
-> Github地址：[yuan-bot](https://github.com/Magren0321/yuan-bot)
+Github地址：[yuan-bot](https://github.com/Magren0321/yuan-bot)
 
 这篇文章是该项目的非正经开发日志的历程记录。
 
