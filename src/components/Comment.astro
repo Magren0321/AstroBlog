@@ -1,0 +1,36 @@
+---
+import '@waline/client/dist/waline-meta.css';
+import '@waline/client/dist/waline.css';
+const { slug } = Astro.props;
+---
+<script>
+  import { init } from '@waline/client';
+
+  class PostComment extends HTMLElement{
+    constructor() {
+      super();
+      const slug = this.dataset.slug || '';
+      init({
+        el: '#waline',
+        serverURL: 'https://waline.magren.cc',
+        path: '/' + slug,
+        emoji:[
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji'
+        ],
+        dark: 'auto',
+        meta: ['nick', 'mail'],
+        requiredMeta: ['nick', 'mail'],
+        imageUploader: false,
+        copyright: false
+      });
+    }
+  }
+
+  customElements.define('post-comment', PostComment);
+</script>
+
+<post-comment data-slug={slug}>
+  <div id="waline" class="mt-10"></div>
+</post-comment>
+
+
