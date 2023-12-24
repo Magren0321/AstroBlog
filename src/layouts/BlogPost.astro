@@ -16,7 +16,7 @@ const {
 	data: { title, description, ogImage, publishDate, updatedDate },
 	slug,
 } = post;
-const socialImage = ogImage ?? `/og-image/${slug}.png`;
+const socialImage = ogImage ?? `/social-card.png`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 // const { headings } = await post.render();
 ---
